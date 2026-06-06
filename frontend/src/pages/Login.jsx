@@ -110,6 +110,16 @@ export default function Login() {
         <p style={{ textAlign: "center", marginTop: 16, fontSize: 14 }}>
           New user? <Link to="/register">Register here</Link>
         </p>
+
+        <p style={{ textAlign: "center", marginTop: 16, fontSize: 15 }}>
+          username: ' admin@storeapp.com ' ; pass: ' Admin@123 '
+        </p>
+        <p style={{ textAlign: "center", marginTop: 16, fontSize: 15 }}>
+          username: ' auser1@example.com ' ; pass: ' User@1234 '
+        </p>
+        <p style={{ textAlign: "center", marginTop: 16, fontSize: 15 }}>
+          username: ' owner1@example.com ' ; pass: ' Owner@123 '
+        </p>
       </div>
     </div>
   );
