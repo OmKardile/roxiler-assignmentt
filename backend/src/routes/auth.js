@@ -41,14 +41,15 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1d" },
     );
     res.json({ token, role: user.role, name: user.name });
-  } catch {
-    res.status(500).json({ message: "Server error" });
-    res.status(500).json({
-      message: err.message,
-      stack: err.stack,
-    });
+  } catch (err) {
+  console.error("LOGIN ERROR:", err);
+
+  res.status(500).json({
+    message: err.message,
+  });
   }
-});
+}
+);
 
 // Change password — logged-in user
 router.put("/password", authMiddleware, async (req, res) => {
